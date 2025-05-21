@@ -2,26 +2,36 @@
   <head>
     <title>Tabella css </title>
 
-    <style>
-      table {
-         width: 80%;
+     <style>
+    table {
+      width: 80%;
       border-collapse: collapse;
       margin: 20px auto;
-      font-family: "Bookman Old Style", "Arial", sans-serif;
-      }
+      font-family: Arial, sans-serif;
+    }
 
-      td, th {
-        font-family: "Bookman Old Style", "Arial", sans-serif;
-         border: 5px solid;
+    th, td {
+      border: 1px solid #999;
       padding: 10px;
       text-align: center;
-      }
-
-      tr:hover {
-      background-color: light grey;
     }
+
+    th {
+      background-color: #004080;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #d0e0f0;
+    }
+
        </style>
 </head>
+  
 <body>
 
   <table>
