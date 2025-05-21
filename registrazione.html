@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modulo di Registrazione</title>
+</head>
+<body>
+
+<form action="#" method="post" enctype="multipart/form-data">
+
+  Cognome:<br>
+  <input type="text" name="cognome" required><br><br>
+
+  Nome:<br>
+  <input type="text" name="nome" required><br><br>
+
+  Data di nascita:<br>
+  <input type="date" name="data_nascita" required><br><br>
+
+  Email:<br>
+  <input type="email" name="email" required><br><br>
+
+  Password:<br>
+  <input type="password" name="password" required><br><br>
+
+  Regione:<br>
+  <select name="regione">
+    <option value="">Seleziona...</option>
+    <option value="lombardia">Lombardia</option>
+    <option value="piemonte">Piemonte</option>
+    <option value="veneto">Veneto</option>
+    <option value="toscana">Toscana</option>
+    <option value="lazio">Lazio</option>
+
+  </select><br><br>
+
+  Maschio <input type="radio" name="sesso" value="maschio" >
+  Femmina <input type="radio" name="sesso" value="femmina" ><br><br>
+
+  Acconsento alla privacy <input type="checkbox" name="privacy" ><br><br>
+
+  Note:<br>
+  <textarea name="note" rows="5" cols="30" placeholder="Scrivi qui le tue note..."></textarea><br><br>
+
+  Invia CV:<br>
+  <input type="file" name="cv"><br><br>
+
+  <input type="submit" value="Invia">
+
+</form>
+
+</body>
+</html>
