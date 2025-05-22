@@ -1,19 +1,94 @@
-<html>
-  <head>
-    <title>Tabella css </title>
-
-     <style>
-    table {
-      width: 80%;
-      border-collapse: collapse;
-      margin: 20px auto;
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tabella CSS</title>
+  <style>
+    body {
       font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+        nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+    
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
     }
 
     th, td {
       border: 1px solid #999;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
+      transition: background-color 0.3s ease;
     }
 
     th {
@@ -25,39 +100,113 @@
       background-color: #f2f2f2;
     }
 
-    tr:hover {
-      background-color: #d0e0f0;
+    /* Hover sulle celle del voto */
+    td.low:hover {
+      background-color: #ffcccc;
     }
 
-       </style>
-</head>
-  
-<body>
+    td.high:hover {
+      background-color: #ccffcc;
+    }
 
-  <table>
-    <tr>
-      <th>Studente</th>
-      <th>Matematica</th>
-      <th>Italiano</th>
-    </tr>
-    <tr>
-      <td>Mario Rossi</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Luca Bianchi</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>Giulia Verdi</td>
-      <td>9</td>
-      <td>8</td>
-    </tr>
-  </table>
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+ <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+        <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="paragrafi.html">Paragrafi in html</a>
+        <a href="voti.html">Tabella voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h1>Voti degli Studenti</h1>
+
+    <table>
+      <tr>
+        <th>Studente</th>
+        <th>Materia</th>
+        <th>Voto</th>
+      </tr>
+      <tr>
+        <td>Mario Rossi</td>
+        <td>Matematica</td>
+        <td class="high">6</td>
+      </tr>
+      <tr>
+        <td>Mario Rossi</td>
+        <td>Italiano</td>
+        <td class="high">7</td>
+      </tr>
+      <tr>
+        <td>Luca Bianchi</td>
+        <td>Matematica</td>
+        <td class="low">4</td>
+      </tr>
+      <tr>
+        <td>Luca Bianchi</td>
+        <td>Italiano</td>
+        <td class="low">5</td>
+      </tr>
+      <tr>
+        <td>Giulia Verdi</td>
+        <td>Matematica</td>
+        <td class="high">9</td>
+      </tr>
+      <tr>
+        <td>Giulia Verdi</td>
+        <td>Italiano</td>
+        <td class="high">8</td>
+      </tr>
+    </table>
+
+    <a href="index.html">← Torna alla pagina principale</a>
+  </main>
+
+  <footer>
+    <p>Istituto Tecnico "Stanislao Cannizzaro"</p>
+  </footer>
 
 </body>
 </html>
+
+
