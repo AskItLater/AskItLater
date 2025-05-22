@@ -1,29 +1,172 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Intestazioni </title>
-  
+  <title>Intestazioni</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+
+    main h1, main h2, main h3, main h4, main h5, main h6 {
+      color: #004080;
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 1.1em;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .back-link a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+        <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="paragrafi.html">Paragrafi in html</a>
+        <a href="voti.html">Tabella voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+      </div>
+    </div>
 
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="back-link">
+      <a href="index.html">← Torna alla pagina principale</a>
+    </div>
+    
+    <center>
+    <h2><b>Livelli di Intestazione</b></h2>
+    </center>
+    
+    <p align="left">
+    
+    <h1>Primo livello delle intestazioni</h1>
+    <h2>Secondo livello delle intestazioni</h2>
+    <h3>Terzo livello delle intestazioni</h3>
+    <h4>Quarto livello delle intestazioni</h4>
+    <h5>Quinto livello delle intestazioni</h5>
+    <h6>Sesto livello delle intestazioni</h6>
+    
+    </p>
+    
+    <p>Questo invece è un paragrafo.</p>
+  </main>
   
-<h1> Questa pagina è dedicata all'apprendimento dei comandi base. </h1>
-  
-<h1> Questo è il primo livello delle intestazioni. </h1>
-<h2> Questo è il secondo livello delle intestazioni. </h2>
-<h3> Questo è il terzo livello delle intestazioni. </h3>
-<h4> Questo è il quarto livello delle intestazioni. </h4>
-<h5> Questo è il quinto livello delle intestazioni. </h5>
-<h6> Questo è il sesto livello delle intestazioni. </h6>
-
-<p>Questo invece è un paragrafo.</p>
-
-
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+  <footer>
+    <p>Istituto Tecnico "Stanislao Cannizzaro"</p>
+  </footer>
 
 </body>
 </html>
