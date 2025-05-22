@@ -1,34 +1,190 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Esercizio 1 </title>
-  
+  <title>Foto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    main h1 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 30px;
+    }
+
+    .image-center {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .image-center img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .right-text {
+      text-align: right;
+      font-family: Verdana, sans-serif;
+      font-style: italic;
+      margin: 20px 0;
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  
-<h1> Questa pagina è dedicata all'apprendimento dei comandi base. </h1>
 
-<center>
-<img url="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80">
-</center>
-  
-<p>Questa qui sopra è un'immagine centrata. </p>
-  
-<hr>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+        <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="voti.html">Tabella voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+      </div>
+    </div>
 
-<p align="right"> <font name="Verdana"> <i> Questo è un testo in Verdana allineato a destra.</i> </font>
-
-<br>
-    
-<ul> Questa è una lista non ordinata.</ul>
-<li> Lorem </li>
-<li> Lorem </li>
-<li> Lorem </li>
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap</a>
+      </div>
+    </div>
+  </nav>
+ 
+  <main> 
   
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+  <a href="index.html">← Torna alla pagina principale</a>
+    <h1>Esercizio 1</h1>
+
+    <div class="image-center">
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80" alt="immagine di esempio">
+    </div>
+
+    <p style="text-align: center;">Questa qui sopra è un'immagine centrata.</p>
+
+    <hr>
+
+    <p class="right-text">Questo è un testo in Verdana allineato a destra.</p>
+
+    <h3>Questa è una lista non ordinata:</h3>
+    <ul>
+      <li>Lorem</li>
+      <li>Lorem</li>
+      <li>Lorem</li>
+    </ul>
+
+   
+  </main>
+
+  <footer>
+    <p>Questa pagina è dedicata all'apprendimento dei comandi base.</p>
+  </footer>
 
 </body>
 </html>
