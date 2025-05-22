@@ -4,18 +4,188 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Auto - Modelli e Prezzi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #003366;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    table, th, td {
+      border: 1px solid #999;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #004080;
+      color: white;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    form {
+      margin-top: 20px;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0066cc;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 10px 0;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 15px;
+    }
+
+    .dropbtn {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #0066cc;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
+   <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+       <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="voti.html">Tabella  voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+        <a href="registrazione.html">Registrazione in html</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap </a>
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+      </div>
+    </div>
+  </nav>
 
   <h1>Scopri la nostra Auto</h1>
 
-  <center>
   <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/car-156127_960_720.png" alt="Immagine Auto" width="400" />
-  </center>
 
   <h2>Prezzi per modello e tipo di alimentazione</h2>
-  <table border="1" cellpadding="8" cellspacing="0">
+  <table>
     <tr>
       <th>Modello</th>
       <th>Alimentazione</th>
@@ -24,25 +194,24 @@
     <tr>
       <td>Modello A</td>
       <td>Benzina</td>
-      <td>20,000</td>
+      <td>20.000</td>
     </tr>
     <tr>
       <td>Modello A</td>
       <td>Elettrico</td>
-      <td>25,000</td>
+      <td>25.000</td>
     </tr>
     <tr>
       <td>Modello B</td>
       <td>Diesel</td>
-      <td>22,500</td>
+      <td>22.500</td>
     </tr>
     <tr>
       <td>Modello B</td>
       <td>Ibrido</td>
-      <td>27,000</td>
+      <td>27.000</td>
     </tr>
   </table>
-
 
   <h2>Optional disponibili</h2>
   <ul>
@@ -60,14 +229,16 @@
   </p>
 
   <p>
-    Per maggiori informazioni visita la <a href="https://www.concessionariaauto.it">concessionaria ufficiale</a>.
+    Per maggiori informazioni visita la 
+    <a href="https://www.concessionariaauto.it" target="_blank" rel="noopener noreferrer">
+      concessionaria ufficiale
+    </a>.
   </p>
 
- 
   <h2>Contattaci</h2>
-    <input type="text" name="concessionaria"  /><br /><br />
+  <input type="text" name="concessionaria" placeholder="Nome della concessionaria" /><br />
 
-    <input type="checkbox" name="consenso"  />
+    <input type="checkbox" name="consenso" />
     Acconsento al trattamento dei dati<br /><br />
 
     Seleziona il modello di interesse:<br />
@@ -78,8 +249,13 @@
     <button type="submit">Invia</button>
   </form>
 
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+  <a href="index.html">← Torna alla pagina principale</a>
+
+  <footer>
+    <p>&copy; 2025 Concessionaria Auto S.r.l. - Tutti i diritti riservati</p>
+    <p>Via delle Automobili, 123 - Roma (RM) - Tel: 06 1234567</p>
+  </footer>
 
 </body>
 </html>
+
