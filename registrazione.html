@@ -3,53 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <title>Modulo di Registrazione</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px 0; /* margine solo sopra e sotto, non laterale */
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+      margin-bottom: 30px;
+      width: 100%;
+      position: relative;
+      left: 0;
+      right: 0;
+      box-sizing: border-box;
+    }
+
+    nav > .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0066cc;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #004080;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      width: 100%;
+      position: relative;
+      left: 0;
+      right: 0;
+      box-sizing: border-box;
+    }
+
+    footer > .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+  </style>
 </head>
 <body>
 
-<form action="#" method="post" enctype="multipart/form-data">
+  
+  <nav>
+    <div class="container">
+      <div class="dropdown">
+        <button class="dropbtn">Primo periodo</button>
+        <div class="dropdown-content">
+          <a href="registrazione.html">Registrazione in html</a>
+          <a href="intestazioni.html">Intestazioni in html</a>
+          <a href="formattazione.html">Formattazione in html</a>
+          <a href="immagine.html">Foto in html</a>
+          <a href="liste.html">Liste in html</a>
+          <a href="voti.html">Tabella voti in html</a>
+          <a href="ricetta.html">Ricetta in html</a>
+          <a href="esercitazione.html">Esercitazione in html</a>
+        </div>
+      </div>
 
-  Cognome:<br>
-  <input type="text" name="cognome" required><br><br>
+      <div class="dropdown">
+        <button class="dropbtn">Secondo periodo</button>
+        <div class="dropdown-content">
+          <a href="bootstrap2.html">Bootstrap con modal</a>
+          <a href="tabellita.html">Tabella in css</a>
+          <a href="boxFlottanti.html">Box flottanti in css</a>
+          <a href="bootstrap.html">Bootstrap</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <center>
+    <font color=color: #004080;> <h2><b>Registrazione</b></h2> </font>
+  </center>
+  
+  <form action="#" method="post" enctype="multipart/form-data">
 
-  Nome:<br>
-  <input type="text" name="nome" required><br><br>
+    Cognome:<br>
+    <input type="text" name="cognome"><br>
 
-  Data di nascita:<br>
-  <input type="date" name="data_nascita" required><br><br>
+    Nome:<br>
+    <input type="text" name="nome"><br>
 
-  Email:<br>
-  <input type="email" name="email" required><br><br>
+    Data di nascita:<br>
+    <input type="date" name="data_nascita"><br>
 
-  Password:<br>
-  <input type="password" name="password" required><br><br>
+    Email:<br>
+    <input type="email" name="email"><br>
 
-  Regione:<br>
-  <select name="regione">
-    <option value="">Seleziona...</option>
-    <option value="lombardia">Lombardia</option>
-    <option value="piemonte">Piemonte</option>
-    <option value="veneto">Veneto</option>
-    <option value="toscana">Toscana</option>
-    <option value="lazio">Lazio</option>
+    Password:<br>
+    <input type="password" name="password"><br>
 
-  </select><br><br>
+    Regione:<br>
+    <select name="regione">
+      <option value="">Seleziona...</option>
+      <option value="lombardia">Lombardia</option>
+      <option value="piemonte">Piemonte</option>
+      <option value="veneto">Veneto</option>
+      <option value="toscana">Toscana</option>
+      <option value="lazio">Lazio</option>
+    </select><br>
 
-  Maschio <input type="radio" name="sesso" value="maschio" >
-  Femmina <input type="radio" name="sesso" value="femmina" ><br><br>
+    Maschio <input type="radio" name="sesso" value="maschio">
+    Femmina <input type="radio" name="sesso" value="femmina"><br><br>
 
-  Acconsento alla privacy <input type="checkbox" name="privacy" ><br><br>
+    Acconsento alla privacy <input type="checkbox" name="privacy"><br><br>
 
-  Note:<br>
-  <textarea name="note" rows="5" cols="30" placeholder="Scrivi qui le tue note..."></textarea><br><br>
+    Note:<br>
+    <textarea name="note" rows="5" cols="30" placeholder="Scrivi qui le tue note..."></textarea><br>
 
-  Invia CV:<br>
-  <input type="file" name="cv"><br><br>
+    Invia CV:<br>
+    <input type="file" name="cv"><br><br>
 
-  <input type="submit" value="Invia">
+    <input type="submit" value="Invia">
+  </form>
 
-</form>
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+  <a href="index.html">← Torna alla pagina principale</a>
+
+  <footer>
+    <div class="container">
+      <p>Questa pagina è dedicata all'apprendimento dei comandi base.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
