@@ -1,42 +1,173 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <title>Liste </title>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    main h3 {
+      color: #004080;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    ul, ol {
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  
-  <h1> Questa pagina è dedicata all'apprendimento dei comandi base. </h1>
 
-  <ul> <h3> Questa è una lista non ordinata. </h3>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  </ul>
+ 
 
-  <br>
-  
-  <ol> <h3> Questa è una lista ordinata. </h3>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  </ol>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+        <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="paragrafi.html">Paragrafi in html</a>
+        <a href="voti.html">Tabella voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+      </div>
+    </div>
 
-  <br>
-    
-  <ol type="I"> <h3> Questa è una lista ordinata di tipo I(numeri romani). </h3>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  </ol>
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap</a>
+      </div>
+    </div>
+  </nav>
 
-  <br>
+  <main>
+    <h2>Tipi di Liste</h2>
 
-  <ol type="A"> <h3> Questa è una lista ordinata di tipo A. </h3>
-  <li> Lorem </li>
-  <li> Lorem </li>
-  </ol>
-  
+    <h3>Lista non ordinata:</h3>
+    <ul>
+      <li>Lorem</li>
+      <li>Lorem</li>
+      <li>Lorem</li>
+    </ul>
+
+    <h3>Lista ordinata:</h3>
+    <ol>
+      <li>Lorem</li>
+      <li>Lorem</li>
+      <li>Lorem</li>
+    </ol>
+
+    <h3>Lista ordinata con numeri romani (tipo I):</h3>
+    <ol type="I">
+      <li>Lorem</li>
+      <li>Lorem</li>
+      <li>Lorem</li>
+    </ol>
+
+    <h3>Lista ordinata con lettere (tipo A):</h3>
+    <ol type="A">
+      <li>Lorem</li>
+      <li>Lorem</li>
+    </ol>
+  </main>
+
+  <footer>
+    <p>Istituto Tecnico "Stanislao Cannizzaro"</p>
+  </footer>
+
 </body>
 </html>
