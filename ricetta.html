@@ -1,66 +1,270 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ricetta: Pasta al Pomodoro</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #0066cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .dropbtn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    main h2, main h1 {
+      color: #004080;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #004080;
+      color: white;
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 20px;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Pasta al Pomodoro</h1>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">Primo periodo</button>
+      <div class="dropdown-content">
+        <a href="registrazione.html">Registrazione in html</a>
+        <a href="intestazioni.html">Intestazioni in html</a>
+        <a href="formattazione.html">Formattazione in html</a>
+        <a href="immagine.html">Foto in html</a>
+        <a href="liste.html">Liste in html</a>
+        <a href="voti.html">Tabella voti in html</a>
+        <a href="ricetta.html">Ricetta in html</a>
+        <a href="esercitazione.html">Esercitazione in html</a>
+      </div>
+    </div>
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Pasta_al_pomodoro_01.jpg" alt="Pasta al Pomodoro" width="400">
+    <div class="dropdown">
+      <button class="dropbtn">Secondo periodo</button>
+      <div class="dropdown-content">
+        <a href="bootstrap2.html">Bootstrap con modal</a>
+        <a href="tabellita.html">Tabella in css</a>
+        <a href="boxFlottanti.html">Box flottanti in css</a>
+        <a href="bootstrap.html">Bootstrap</a>
+      </div>
+    </div>
+  </nav>
 
-  <table border="1" cellpadding="8" cellspacing="0">
-    <tr>
-      <th>Difficoltà</th>
-      <th>Costo</th>
-      <th>Tempo di realizzazione</th>
-    </tr>
-    <tr>
-      <td>Facile</td>
-      <td>Basso</td>
-      <td>20 minuti</td>
-    </tr>
-  </table>
+  <main>
+    <a href="index.html">← Torna alla pagina principale</a>
+    <h1>Pasta al Pomodoro</h1>
 
-  <h2>Ingredienti</h2>
-  <ul>
-    <li>200g di pasta</li>
-    <li>400g di pomodori pelati</li>
-    <li>2 spicchi d'aglio</li>
-    <li>Olio extravergine d'oliva</li>
-    <li>Sale q.b.</li>
-    <li>Basilico fresco</li>
-  </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Pasta_al_pomodoro_01.jpg" alt="Pasta al Pomodoro" width="400">
 
-  <h2>Istruzioni</h2>
-  <p>
-    In una padella, scaldate l'olio e aggiungete l'aglio tritato. Dopo qualche minuto, unite i pomodori pelati e fate cuocere a fuoco medio per 15 minuti, aggiustando di sale. Cuocete la pasta in abbondante acqua salata, scolatela al dente e conditela con il sugo al pomodoro. Guarnite con basilico fresco e servite calda.
-  </p>
+    <table>
+      <tr>
+        <th>Difficoltà</th>
+        <th>Costo</th>
+        <th>Tempo di realizzazione</th>
+      </tr>
+      <tr>
+        <td>Facile</td>
+        <td>Basso</td>
+        <td>20 minuti</td>
+      </tr>
+    </table>
 
-  <p>Ricetta originale su: <a href="https://it.wikipedia.org/wiki/Pasta_al_pomodoro" target="_blank" rel="noopener noreferrer">Wikipedia - Pasta al Pomodoro</a></p>
+    <h2>Ingredienti</h2>
+    <ul>
+      <li>200g di pasta</li>
+      <li>400g di pomodori pelati</li>
+      <li>2 spicchi d'aglio</li>
+      <li>Olio extravergine d'oliva</li>
+      <li>Sale q.b.</li>
+      <li>Basilico fresco</li>
+    </ul>
 
-  <h2>Feedback</h2>
-  <form action="#" method="post">
-    Email:<br>
-    <input type="email" name="email" required><br><br>
+    <h2>Istruzioni</h2>
+    <p>
+      In una padella, scaldate l'olio e aggiungete l'aglio tritato. Dopo qualche minuto, unite i pomodori pelati e fate cuocere a fuoco medio per 15 minuti, aggiustando di sale.
+      Cuocete la pasta in abbondante acqua salata, scolatela al dente e conditela con il sugo al pomodoro.
+      Guarnite con basilico fresco e servite calda.
+    </p>
 
-    Password:<br>
-    <input type="password" name="password" required><br><br>
+    <p style="text-align: center;">
+      Ricetta originale su:
+      <a href="https://it.wikipedia.org/wiki/Pasta_al_pomodoro" target="_blank" rel="noopener noreferrer">
+        Wikipedia - Pasta al Pomodoro
+      </a>
+    </p>
 
-    <input type="checkbox" name="privacy" required> Acconsento al trattamento dei dati<br><br>
+    <h2>Feedback</h2>
+    <form action="#" method="post">
+      <label>Email:</label><br>
+      <input type="email" name="email"><br>
 
-    Gradimento:<br>
-    <select name="gradimento" multiple size="3" required>
-      <option value="ottimo">Ottimo</option>
-      <option value="buono">Buono</option>
-      <option value="sufficiente">Sufficiente</option>
-    </select><br><br>
+      <label>Password:</label><br>
+      <input type="password" name="password"><br>
 
-    <input type="submit" value="Invia">
-  </form>
-<br>
-   <a href="index.html">← Torna alla pagina principale</a>
+      <label>
+        <input type="checkbox" name="privacy"> Acconsento al trattamento dei dati
+      </label><br><br>
+
+      <label>Gradimento:</label><br>
+      <select name="gradimento" multiple size="3">
+        <option value="ottimo">Ottimo</option>
+        <option value="buono">Buono</option>
+        <option value="sufficiente">Sufficiente</option>
+      </select><br><br>
+
+      <input type="submit" value="Invia">
+    </form>
+  </main>
+
+
+ <footer>
+    <p>Istituto Tecnico "Stanislao Cannizzaro"</p>
+  </footer>
 
 </body>
 </html>
