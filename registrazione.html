@@ -75,13 +75,24 @@
       background-color: #005bb5;
     }
 
-    form {
-      background-color: #fff;
-      padding: 20px;
+    main {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      text-align: center;
+      color: #0066cc;
+      margin-bottom: 30px;
+    }
+
+    form {
       max-width: 500px;
       margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     input[type="text"],
@@ -96,25 +107,11 @@
       margin: 5px 0 15px 0;
       border: 1px solid #ccc;
       border-radius: 4px;
+      box-sizing: border-box;
     }
 
     textarea {
       resize: vertical;
-    }
-
-    main {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    main h1 {
-      text-align: center;
-      color: #004080;
-      margin-bottom: 30px;
     }
 
     input[type="radio"],
@@ -129,6 +126,9 @@
       padding: 10px 20px;
       border-radius: 4px;
       cursor: pointer;
+      display: block;
+      margin: 20px auto 0 auto;
+      font-weight: bold;
     }
 
     input[type="submit"]:hover {
@@ -170,7 +170,6 @@
 </head>
 <body>
 
-  
   <nav>
     <div class="container">
       <div class="dropdown">
@@ -198,53 +197,57 @@
       </div>
     </div>
   </nav>
+
   <main>
-  <center>
-    <a href="index.html">← Torna alla pagina principale</a> <br>
-    <font color=color: #0066cc;> <h2><b>Registrazione</b></h2> </font>
-  </center>
-  
-  <form action="#" method="post" enctype="multipart/form-data">
+    <a href="index.html">← Torna alla pagina principale</a>
+    <h2>Registrazione</h2>
 
-    Cognome:<br>
-    <input type="text" name="cognome"><br>
+    <form action="#" method="post" enctype="multipart/form-data">
 
-    Nome:<br>
-    <input type="text" name="nome"><br>
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome" name="cognome">
 
-    Data di nascita:<br>
-    <input type="date" name="data_nascita"><br>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome">
 
-    Email:<br>
-    <input type="email" name="email"><br>
+      <label for="data_nascita">Data di nascita:</label>
+      <input type="date" id="data_nascita" name="data_nascita">
 
-    Password:<br>
-    <input type="password" name="password"><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
 
-    Regione:<br>
-    <select name="regione">
-      <option value="">Seleziona...</option>
-      <option value="lombardia">Lombardia</option>
-      <option value="piemonte">Piemonte</option>
-      <option value="veneto">Veneto</option>
-      <option value="toscana">Toscana</option>
-      <option value="lazio">Lazio</option>
-    </select><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
 
-    Maschio <input type="radio" name="sesso" value="maschio">
-    Femmina <input type="radio" name="sesso" value="femmina"><br><br>
+      <label for="regione">Regione:</label>
+      <select id="regione" name="regione">
+        <option value="">Seleziona...</option>
+        <option value="lombardia">Lombardia</option>
+        <option value="piemonte">Piemonte</option>
+        <option value="veneto">Veneto</option>
+        <option value="toscana">Toscana</option>
+        <option value="lazio">Lazio</option>
+      </select>
 
-    Acconsento alla privacy <input type="checkbox" name="privacy"><br><br>
+      <label>Sesso:</label>
+      <input type="radio" id="maschio" name="sesso" value="maschio">
+      <label for="maschio" style="display:inline;">Maschio</label>
+      <input type="radio" id="femmina" name="sesso" value="femmina">
+      <label for="femmina" style="display:inline;">Femmina</label>
 
-    Note:<br>
-    <textarea name="note" rows="5" cols="30" placeholder="Scrivi qui le tue note..."></textarea><br>
+      <br><br>
+      <input type="checkbox" id="privacy" name="privacy">
+      <label for="privacy" style="display:inline;">Acconsento alla privacy</label>
 
-    Invia CV:<br>
-    <input type="file" name="cv"><br><br>
+      <label for="note">Note:</label>
+      <textarea id="note" name="note" rows="5" placeholder="Scrivi qui le tue note..."></textarea>
 
-    <input type="submit" value="Invia">
+      <label for="cv">Invia CV:</label>
+      <input type="file" id="cv" name="cv">
+
+      <input type="submit" value="Invia">
+    </form>
   </main>
-  </form>
 
   <footer>
     <div class="container">
