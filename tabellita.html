@@ -3,18 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tabella CSS</title>
+  <title>Tabella CSS - Voti Studenti</title>
   <style>
+    :root {
+      --primary: #004080;
+      --accent: #0066cc;
+      --light: #f4f6f9;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f9;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light);
       color: #333;
       line-height: 1.6;
-      margin: 0;
-      padding: 0;
     }
-        nav {
-      background-color: #0066cc;
+
+    nav {
+      background-color: var(--accent);
       text-align: center;
       padding: 10px 0;
     }
@@ -26,7 +33,7 @@
     }
 
     .dropbtn {
-      background-color: #0066cc;
+      background: none;
       color: white;
       padding: 10px 20px;
       font-weight: bold;
@@ -39,42 +46,41 @@
       position: absolute;
       background-color: white;
       min-width: 180px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px var(--shadow);
       z-index: 1;
       text-align: left;
+      border-radius: 6px;
     }
 
     .dropdown-content a {
-      color: #004080;
+      color: var(--primary);
       padding: 10px 15px;
       display: block;
       text-decoration: none;
     }
 
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
+    .dropdown-content a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #005bb5;
+      color: white;
     }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
-    .dropdown:hover .dropbtn {
-      background-color: #005bb5;
-    }
-    
     main {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
-      padding: 20px;
+      padding: 30px;
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--shadow);
     }
 
     h1 {
       text-align: center;
-      color: #004080;
+      color: var(--primary);
       margin-bottom: 30px;
     }
 
@@ -82,38 +88,42 @@
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
     th, td {
-      border: 1px solid #999;
+      border: 1px solid #ccc;
       padding: 12px;
       text-align: center;
       transition: background-color 0.3s ease;
     }
 
     th {
-      background-color: #004080;
+      background-color: var(--primary);
       color: white;
     }
 
     tr:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
     }
 
-    /* Hover sulle celle del voto */
+    tr:hover {
+      background-color: #eef4ff;
+    }
+
     td.low:hover {
-      background-color: #ffcccc;
+      background-color: #ffe5e5;
     }
 
     td.high:hover {
-      background-color: #ccffcc;
+      background-color: #e5ffe5;
     }
 
     a {
       display: block;
       text-align: center;
       margin-top: 20px;
-      color: #0066cc;
+      color: var(--accent);
       text-decoration: none;
       font-weight: bold;
     }
@@ -123,44 +133,54 @@
     }
 
     footer {
-      background-color: #004080;
+      background-color: var(--primary);
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 14px;
+      }
+
+      .dropbtn {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
- <nav>
+  <nav>
     <div class="dropdown">
       <button class="dropbtn">Primo periodo</button>
       <div class="dropdown-content">
-        <a href="registrazione.html">Registrazione in html</a>
-        <a href="intestazioni.html">Intestazioni in html</a>
-        <a href="formattazione.html">Formattazione in html</a>
-        <a href="immagine.html">Foto in html</a>
-        <a href="liste.html">Liste in html</a>
-        <a href="paragrafi.html">Paragrafi in html</a>
-        <a href="voti.html">Tabella voti in html</a>
-        <a href="ricetta.html">Ricetta in html</a>
-        <a href="esercitazione.html">Esercitazione in html</a>
+        <a href="registrazione.html">Registrazione</a>
+        <a href="intestazioni.html">Intestazioni</a>
+        <a href="formattazione.html">Formattazione</a>
+        <a href="immagine.html">Immagine</a>
+        <a href="liste.html">Liste</a>
+        <a href="paragrafi.html">Paragrafi</a>
+        <a href="voti.html">Voti</a>
+        <a href="ricetta.html">Ricetta</a>
+        <a href="esercitazione.html">Esercitazione</a>
       </div>
     </div>
 
     <div class="dropdown">
       <button class="dropbtn">Secondo periodo</button>
       <div class="dropdown-content">
-        <a href="bootstrap2.html">Bootstrap con modal</a>
-        <a href="tabellita.html">Tabella in css</a>
-        <a href="boxFlottanti.html">Box flottanti in css</a>
-        
+        <a href="bootstrap2.html">Bootstrap</a>
+        <a href="tabellita.html">Tabella CSS</a>
+        <a href="boxFlottanti.html">Box Flottanti</a>
       </div>
     </div>
   </nav>
+
   <main>
     <h1>Voti degli Studenti</h1>
-
     <table>
       <tr>
         <th>Studente</th>
@@ -203,10 +223,7 @@
   </main>
 
   <footer>
-    <p>Istituto Tecnico "Stanislao Cannizzaro"</p>
+    <p>Istituto Tecnico "Stanislao Cannizzaro" - Pagina CSS Tabella</p>
   </footer>
-
 </body>
 </html>
-
-
