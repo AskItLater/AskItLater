@@ -13,81 +13,13 @@
       line-height: 1.6;
     }
 
-    .container {
+    .section-box {
       background-color: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: 50px auto;
-    }
-
-    h1 {
       color: #004080;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .btn-primary {
-      background-color: #0066cc;
-      border-color: #005bb5;
-      font-weight: bold;
-      padding: 10px 25px;
-      transition: background-color 0.3s ease;
-      display: block;
-      margin: 0 auto 30px auto;
-      border-radius: 5px;
-    }
-
-    .btn-primary:hover {
-      background-color: #005bb5;
-      border-color: #004a99;
-    }
-
-    .modal-content {
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .modal-header {
-      background-color: #004080;
-      color: white;
-      border-bottom: none;
-      border-radius: 10px 10px 0 0;
-    }
-
-    .modal-title {
-      font-weight: 700;
-      font-size: 1.5rem;
-    }
-
-    .btn-close {
-      filter: invert(1);
-    }
-
-    .modal-body {
-      font-size: 1.1rem;
-      padding: 20px 30px;
-      color: #222;
-    }
-
-    .modal-footer {
-      border-top: none;
-      padding: 15px 30px 25px 30px;
-      justify-content: center;
-    }
-
-    .btn-secondary {
-      background-color: #888;
-      border: none;
-      padding: 8px 20px;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-secondary:hover {
-      background-color: #555;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      margin-top: 30px;
     }
 
     nav {
@@ -148,6 +80,36 @@
       margin-top: 40px;
     }
 
+    .btn-primary {
+      background-color: #0066cc;
+      border-color: #005bb5;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover {
+      background-color: #005bb5;
+      border-color: #004a99;
+    }
+
+    .modal-content {
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .modal-header {
+      background-color: #004080;
+      color: white;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .modal-title {
+      font-weight: 700;
+    }
+
+    .btn-close {
+      filter: invert(1);
+    }
+
     .back-link {
       display: block;
       text-align: center;
@@ -186,15 +148,15 @@
 
   <a href="index.html" class="back-link">← Torna alla pagina principale</a>
 
-
-  <div class="container-fluid p-5 bg-primary text-white text-center">
+  <!-- Box bianco con ombra sopra le colonne -->
+  <div class="container section-box text-center">
     <h1>Questa è una pagina bootstrap!</h1>
     <p>(Fatta con molta fatica)</p> 
   </div>
 
-
-  <div class="container mt-5">
-    <div class="row">
+  <!-- Box con le tre colonne, anche questo con ombra -->
+  <div class="container section-box">
+    <div class="row text-center">
       <div class="col-sm-4">
         <h3>Colonna numero 1♫</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
@@ -213,7 +175,7 @@
     </div>
   </div>
 
-
+  <!-- Modal -->
   <div class="container mt-5">
     <h1>Usare una Modal con Bootstrap</h1>
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
